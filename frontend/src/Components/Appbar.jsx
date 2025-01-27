@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 export const Appbar = ()=>{
     return <div className="flex justify-between shadow  h-14">
         <Link to={'/dashboard'}>
-            <div className="flex flex-col justify-center h-full ml-4 font-semibold text-lg cursor-pointer">PayZap</div>
+            <div className="flex flex-col justify-center h-full ml-4 font-semibold text-lg cursor-pointer">Payasap</div>
         </Link>
         <div className="flex justify-center">
             <Link to={'/signin'}>
