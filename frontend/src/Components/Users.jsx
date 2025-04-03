@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import { Button } from "./Button"
+import { useEffect, useState } from "react";
 import axios from "axios";    
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +6,7 @@ export const Users = ()=>{
     const [users,setUsers] = useState([]);
     const [filter,setFilter] = useState("");
     useEffect(()=>{
-        axios.get("http://localhost:3000/api/v1/user/bulk?filter="+filter)
+        axios.get("https://payasap.vercel.app/api/v1/user/bulk?filter="+filter)
             .then(response =>{
                 console.log(response);
                 setUsers(response.data.user);

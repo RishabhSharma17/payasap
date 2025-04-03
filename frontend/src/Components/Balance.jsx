@@ -4,7 +4,7 @@ import axios from "axios"
 export const Balance = ()=>{
     const [val,setVal] = useState(null);
     useEffect(()=>{
-        axios.get('http://localhost:3000/api/v1/account/balance',{
+        axios.get('https://payasap.vercel.app/api/v1/account/balance',{
             headers:{
                 Authorization:'Bearer '+localStorage.getItem("token")
             }

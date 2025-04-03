@@ -22,7 +22,7 @@ export const SendMoney = () => {
         }
 
         try {
-            const res = await axios.post("/api/v1/account/transfer", {
+            const res = await axios.post(`https://payasap.vercel.app/api/v1/account/transfer`, {
                 to: id,
                 amount,
             }, {
