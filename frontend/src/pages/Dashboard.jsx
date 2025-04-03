@@ -1,5 +1,5 @@
-import { Appbar } from "../components/Appbar"
-import { Balance } from "../components/Balance";
+import { Appbar } from "../Component/Appbar"
+import { Balance } from "../Component/Balance";
 import { Users }  from "./Users";
 
 export const Dashboard = ()=>{

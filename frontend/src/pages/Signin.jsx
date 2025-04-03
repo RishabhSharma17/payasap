@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BottomWarning } from "../components/BottomWarning";
-import { Button } from "../components/Button";
-import { Heading } from "../components/Heading";
-import { InputBox } from "../components/InputBox";
-import { SubHeading } from "../components/SubHeading";
+import { BottomWarning } from "../Component/BottomWarning";
+import { Button } from "../Component/Button";
+import { Heading } from "../Component/Heading";
+import { InputBox } from "../Component/InputBox";
+import { SubHeading } from "../Component/SubHeading";
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
