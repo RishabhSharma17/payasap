@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const db = mongoose.connect('mongodb+srv://rishabhsharma1782004:Rs%4017082004@cluster0.h52v3.mongodb.net/paytm');
+const db = mongoose.connect(process.env.MONGO_URL);
 
 if(db){
     console.log("Database Connected");
