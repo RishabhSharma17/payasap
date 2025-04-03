@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { Router, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { Appbar } from "../components/Appbar";
@@ -22,7 +22,7 @@ export const SendMoney = () => {
         }
 
         try {
-            const res = await axios.post("http://localhost:3000/api/v1/account/transfer", {
+            const res = await axios.post("/api/v1/account/transfer", {
                 to: id,
                 amount,
             }, {
@@ -32,6 +32,9 @@ export const SendMoney = () => {
             });
             console.log(res);
             setMessage(res.data.msg);
+            setTimeout(() => {
+                window.location.href = "/dashboard";
+            }, 1000);
         } catch (error) {
             console.error(error);
             setMessage("Transfer failed. Please try again.");

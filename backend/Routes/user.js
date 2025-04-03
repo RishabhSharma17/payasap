@@ -12,7 +12,8 @@ const signupschema = zod.object({
     firstname:zod.string(),
     lastname:zod.string(),
     password:zod.string(),
-})
+});
+
 Router.post('/signup',async (req,res)=>{
     const body = req.body;
     const  validation = signupschema.safeParse(body);
