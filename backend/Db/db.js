@@ -1,10 +1,19 @@
 const mongoose = require('mongoose');
 
-const db = mongoose.connect(process.env.MONGO_URL);
-
-if(db){
-    console.log("Database Connected");
+// Load environment variables if not in production
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
 }
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URL)
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error);
+        process.exit(1); // Exit process on connection failure
+    });
 
 const userData = new mongoose.Schema({
     username:{
