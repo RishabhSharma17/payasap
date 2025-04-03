@@ -1,7 +1,7 @@
 import { Router, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-import { Appbar } from "../components/Appbar";
+import { Appbar } from "../Components/Appbar";
 
 export const SendMoney = () => {
     let [searchParams] = useSearchParams();
